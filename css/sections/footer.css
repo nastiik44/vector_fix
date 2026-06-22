@@ -210,7 +210,14 @@
         gap: var(--space-12);
         margin-top: var(--space-32);
     }
+    .footer__container {
+        grid-template-columns: 1fr; /* одна колонка */
+    }
 
+    .footer__contacts {
+        grid-column: 1;
+        width: 100%;
+    }
     /* Юридические ссылки — в самый низ */
     .footer__legal {
         order: 1;          
