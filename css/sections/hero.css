@@ -101,6 +101,7 @@
     margin-top: var(--space-40);
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden; 
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
