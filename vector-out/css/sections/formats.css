@@ -1,0 +1,39 @@
+/* Секция: Formats */
+
+.formats { padding-block: var(--space-64); }
+
+.formats__eyebrow {
+    justify-content: center;
+    margin-bottom: var(--space-32);
+}
+
+.eyebrow__line--dim {
+    background-color: rgba(232, 93, 26, 0.4);
+}
+
+.formats__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-40);
+}
+
+/* Сетка карточек: 2 колонки */
+.formats__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+}
+
+@media (max-width: 1024px) {
+    .formats__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .formats { padding-block: var(--space-48); }
+
+    .formats__tabs { justify-content: flex-start; overflow-x: auto; }
+
+    .formats__grid {
+        grid-template-columns: 1fr;
+    }
+}

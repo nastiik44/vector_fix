@@ -1,0 +1,49 @@
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    gap: 0;
+}
+
+.logo__wordmark {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+    /* Анимация: зачёркивание появляется через подчёркивание */
+    text-decoration: line-through;
+    text-decoration-color: var(--color-primary);
+}
+
+/* Стрелка рисуется как псевдоэлемент */
+.logo::after {
+    content: '→';
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-primary);
+    margin-left: 4px;
+    line-height: 1;
+    display: inline-block;
+    /* Анимация появления */
+    opacity: 0;
+    transform: translateX(-8px);
+    animation: arrowAppear 0.6s ease forwards 0.8s;
+}
+
+@keyframes arrowAppear {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo:hover::after {
+    animation: none;
+    opacity: 1;
+    transform: translateX(4px);
+    transition: transform 0.3s ease;
+}

@@ -1,0 +1,56 @@
+/* Секция: About1 — Почему обычные корпоративы не работают */
+
+/* ── Общие хелперы для секций  */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-12);
+    text-align: center;
+    margin-bottom: var(--space-48);
+}
+
+.section-heading {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--fs-h2);
+    line-height: 1.2;
+    color: #faf6ee;
+}
+
+.section-desc {
+    font-size: 15px;
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    max-width: 560px;
+}
+
+/* ── Секция  */
+.about1 { padding-block: var(--space-64); }
+
+.about1__container { }
+
+/* ── Сетка 2×3  */
+.about1__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+}
+
+/* Мобайл */
+@media (max-width: 768px) {
+    .about1 { padding-block: var(--space-48); }
+
+    .section-heading {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .section-desc { font-size: var(--fs-caption); }
+
+    .about1__grid {
+        grid-template-columns: 1fr;
+    }
+
+}

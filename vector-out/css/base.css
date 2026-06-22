@@ -1,0 +1,164 @@
+/* VECTOR — Base / Reset */
+
+@font-face {
+    font-family: 'FindSans Pro';
+    src: url('../fonts/FindSansPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FindSans Pro';
+    src: url('../fonts/FindSansPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FindSans Pro';
+    src: url('../fonts/FindSansPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FindSans Pro';
+    src: url('../fonts/FindSansPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'STRome Trial';
+    src: url('../fonts/STRomeTrial-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    background-color: var(--color-bg-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    /* iOS Safari fix: clip не создаёт scroll container в отличие от hidden */
+    max-width: 100vw;
+}
+
+img, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ── Контейнер ── */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+}
+
+@media (max-width: 1024px) {
+    .container { padding-inline: var(--container-pad-md); }
+}
+
+@media (max-width: 768px) {
+    .container { padding-inline: var(--container-pad-sm); }
+}
+
+/* ── Утилиты ── */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height: var(--header-height);
+    margin-top: calc(var(--header-height) * -1);
+}
+
+@media (max-width: 768px) {
+    :target::before {
+        height: var(--header-height-mobile);
+        margin-top: calc(var(--header-height-mobile) * -1);
+    }
+}
+
+body.menu-open { overflow: hidden; }
