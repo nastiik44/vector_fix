@@ -238,10 +238,9 @@
     }
 
     .hero__heading-line {
-        font-size: var(--fs-h1-sm);
-        line-height: var(--lh-h1-sm);
+        font-size: clamp(28px, 8vw, 44px); /* было больше — уменьши */
         white-space: normal;
-        margin-bottom: 0;
+        word-break: break-word;
         width: 100%;
     }
 
