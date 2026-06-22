@@ -1,0 +1,84 @@
+/* Секция: Contact — form.cta__form */
+
+.contact {
+    padding-block: var(--space-64);
+}
+
+.contact__container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__form-wrap {
+    width: 100%;
+    max-width: 660px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-modal);
+    padding: var(--space-48) var(--space-48);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+}
+
+.contact__heading {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-black);
+    font-style: normal;
+    font-size: var(--fs-h1-sm);
+    line-height: var(--lh-h1-sm);
+    color: var(--color-text-heading);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.contact__form-subtitle {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    font-size: var(--fs-caption);
+    line-height: var(--lh-caption);
+    color: var(--color-text-body);
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.contact__submit {
+    width: 100%;
+    padding: var(--space-16);
+    margin-top: var(--space-8);
+    background-color: var(--color-primary-hover);
+    border: none;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    font-size: var(--fs-caption);
+    line-height: var(--lh-caption);
+    color: var(--color-text-heading);
+    cursor: pointer;
+    text-align: center;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.contact__submit:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .contact { padding-block: var(--space-48); }
+
+    .contact__form-wrap {
+        padding: var(--space-32) var(--space-20);
+        border-radius: var(--radius-card-sm);
+    }
+
+    .contact__heading {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}

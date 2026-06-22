@@ -1,0 +1,27 @@
+/* Секция: About2 — Что такое VECTOR */
+
+.about2 { padding-block: var(--space-64); }
+
+/* ── Сетка: 2 колонки сверху + широкая снизу  */
+.about2__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+}
+
+/* Третья карточка на всю ширину */
+.step-card--wide {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .about2 { padding-block: var(--space-48); }
+
+    .about2__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card--wide {
+        grid-column: 1;
+    }
+}

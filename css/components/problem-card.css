@@ -1,0 +1,74 @@
+/* ============================================================
+   Компонент: ProblemCard
+   ============================================================ */
+
+.problem-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-16);
+    padding: var(--space-24);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    min-height: 160px;
+}
+
+.problem-card__num {
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: var(--font-weight-bold);
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--color-text-heading);
+}
+
+.problem-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.problem-card__title {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-primary);
+}
+
+.problem-card__text {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    font-size: var(--fs-caption);
+    line-height: var(--lh-caption);
+    color: var(--color-text-body);
+}
+
+/* Акцентная плашка — без фона, центр */
+.problem-card--accent {
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-16);
+    text-align: center;
+}
+
+.problem-card__quote {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: var(--lh-body);
+    color: #f0e8d0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .problem-card {
+        gap: var(--space-12);
+        padding: var(--space-20) var(--space-16);
+        min-height: unset;
+    }
+
+    .problem-card__num  { font-size: 32px; line-height: 40px; }
+    .problem-card__title{ font-size: 16px; }
+}

@@ -1,0 +1,38 @@
+/* Компонент: Eyebrow / Label */
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+}
+
+.eyebrow__line {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 1px;
+    background-color: var(--color-primary);
+}
+
+.eyebrow__text {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    letter-spacing: var(--ls-label);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/*  Мобайл  */
+@media (max-width: 768px) {
+    .eyebrow__line {
+        width: 20px;
+    }
+
+    .eyebrow__text {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}

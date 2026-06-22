@@ -1,0 +1,52 @@
+/* ============================================================
+   Компонент: StatBadge
+   ============================================================ */
+
+.stat-badge {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    flex: 1 0 0;
+    min-width: 0;
+    padding: var(--space-16) var(--space-24);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-card);
+}
+
+.stat-badge__value {
+    display: block;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--fs-stat);
+    line-height: 1.2;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.stat-badge__label {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    font-size: var(--fs-caption);
+    line-height: var(--lh-caption);
+    color: var(--color-text-body);
+}
+
+/* ── Мобайл ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .stat-badge {
+        padding: var(--space-16) var(--space-20);
+        border-radius: var(--radius-card-sm);
+    }
+
+    .stat-badge__value {
+        font-size: var(--fs-stat-sm);
+    }
+
+    .stat-badge__label {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
