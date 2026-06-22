@@ -6,12 +6,13 @@
 }
 
 .footer__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 0;
-    min-height: 500px;
-}
+    grid-template-columns: 1fr; /* одна колонка */
+    }
+
+.footer__contacts {
+    grid-column: 1;
+    width: 100%;
+    }
  
 /* ── Лого  */
 .footer__logo-wrap {
